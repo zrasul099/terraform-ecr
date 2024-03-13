@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:  
-      - terraform/**
+      - terraform-ecr/**
   pull_request:
     branches:
       - main
@@ -19,7 +19,7 @@ env:
   # S3 bucket for the Terraform state
   BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE }}
   AWS_REGION: us-west-2
-  EKS_CLUSTER: vprofile-eks
+  
 
 jobs:
   terraform:
@@ -28,7 +28,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./terraform
+        working-directory: /terraform-ecr
 
     steps:
       - name: Checkout source code 
