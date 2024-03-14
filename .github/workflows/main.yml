@@ -19,7 +19,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: /
+        working-directory: .
 
     steps:
       - name: Checkout source code 
