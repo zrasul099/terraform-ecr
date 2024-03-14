@@ -50,5 +50,5 @@ jobs:
 
       - name: Terraform apply
         if: success()
-        run: terraform apply -auto-approve planfile
+        run: terraform apply -auto-approve 
 
