@@ -1,11 +1,7 @@
 name: "ECR"
 
 on:
-  push:
-    branches:
-      - main
-    paths:  
-      - .
+  workflow_dispatch:
 
 
 env:
@@ -34,6 +30,7 @@ jobs:
         uses: hashicorp/setup-terraform@v2
         #with:
         #  terraform_version: 1.6.3
+
       - name: Terraform format
         id: fmt
         run: terraform fmt -check
